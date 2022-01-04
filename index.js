@@ -7,7 +7,13 @@ function receivesAFunction(callback) {
 }
 
 // Part two 
-fn = callback;
+
 function returnsANamedFunction() {
-    return receivesAFunction();
+    return function namedFunction() {
+      console.log('This is a named function')  
+    }
+}
+
+function returnsAnAnonymousFunction() {
+    return () => console.log('This is an anonymous function')
 }
